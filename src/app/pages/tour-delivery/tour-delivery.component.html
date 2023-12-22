@@ -1,0 +1,47 @@
+<div>
+    <input type="number" placeholder="ID du livreur" [(ngModel)]="deliveryPersonId">
+    <button (click)="getToursByDeliveryPerson()">Afficher les tournées</button>
+  
+    <!-- Structure pour afficher les tournées en fonction de l'ID du livreur -->
+    <div *ngIf="toursByDeliveryPerson">
+        <ng-container *ngIf="toursByDeliveryPerson.content !== undefined">
+          <div *ngIf="toursByDeliveryPerson.content.length === 0">
+            Aucune tournée trouvée pour ce livreur.
+          </div>
+          <div *ngIf="toursByDeliveryPerson.content.length > 0">
+            <!-- Affichage du tableau des tournées -->
+             <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom de la tournée</th>
+            <th>Description</th>
+            <th>Date de début</th>
+            <th>Date de fin</th>
+
+         
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tour of toursByDeliveryPerson.content">
+            <td>{{ tour.id }}</td>
+            <td>{{ tour.tourName }}</td>
+            <td>{{ tour.description }}</td>
+            <td>{{ tour.startDate}}</td>
+            <td>{{ tour.endDate }}</td>
+   
+          </tr>
+        </tbody>
+      </table>
+          </div>
+          <div *ngIf="toursByDeliveryPerson.content === undefined">
+            Chargement en cours...
+          </div>
+        </ng-container>
+      
+        <div *ngIf="toursByDeliveryPerson.content === undefined">
+          Les données ne sont pas disponibles pour le moment.
+        </div>
+      </div>
+      
+  

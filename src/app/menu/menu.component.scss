@@ -1,0 +1,29 @@
+// Définition des variables de couleurs
+$blanc: #ffffff;
+$gris: #808080;
+$rouge: #ff0000;
+
+// Appliquer les couleurs à la barre de navigation
+.navbar {
+  background-color: $blanc; // Couleur de fond blanche
+  color: $gris; // Texte gris
+  
+  // Liens de navigation
+  .nav-link {
+    color: $gris; // Couleur du texte gris par défaut
+    &.active {
+      color: $rouge; // Couleur du texte rouge pour le lien actif
+    }
+  }
+  
+  // Bouton de recherche
+  .btn-outline-success {
+    color: $rouge; // Texte rouge
+    border-color: $rouge; // Bordure rouge
+  }
+  
+  // Icône utilisateur
+  .fa-user {
+    color: $rouge; // Couleur de l'icône utilisateur en rouge
+  }
+}

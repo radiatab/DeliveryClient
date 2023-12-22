@@ -1,0 +1,70 @@
+.mx-1 {
+  .d-flex {
+    flex-direction: row;
+
+    .mb-2 {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      button, a {
+        margin-right: 1rem;
+        border: 1px solid #ccc;
+        padding: 0.5rem 1rem;
+        background-color: #fff;
+        color: #333;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #eee;
+        }
+      }
+    }
+
+    a {
+      margin-right: 1rem;
+    }
+
+   
+  }
+}
+// ...
+
+// ...
+
+
+
+
+
+
+
+
+  
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+  
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+  
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  
+    tr:hover {
+      background-color: #ddd;
+    }
+  }
+  
+    

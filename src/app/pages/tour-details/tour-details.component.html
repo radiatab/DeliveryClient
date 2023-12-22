@@ -1,0 +1,26 @@
+<div>
+    <label for="tourIdInput">ID de la tournée :</label>
+    <input type="number" id="tourIdInput" [(ngModel)]="tourId">
+    <button (click)="getTourDetails()">Afficher les détails de la tournée</button>
+  </div>
+  
+  <div *ngIf="tourDetails">
+    <h2>Détails de la tournée</h2>
+    <ul>
+      <li><strong>ID :</strong> {{ tourDetails.id }}</li>
+      <li><strong>Nom de la tournée :</strong> {{ tourDetails.tourName }}</li>
+      <li><strong>Description :</strong> {{ tourDetails.description }}</li>
+      <li><strong>Date de debut</strong> {{ tourDetails.startDate }}</li>
+      <li><strong>Date de fin</strong> {{ tourDetails.endDate }}</li>
+      <li><strong>Livreur</strong> {{ tourDetails.deliveryPersonId }}</li>
+    </ul>
+  </div>
+  
+  <div *ngIf="!tourDetails && tourId">
+    Aucun détail trouvé pour la tournée ayant l'ID {{ tourId }}.
+  </div>
+  
+  <div *ngIf="!tourId && !tourDetails">
+    Veuillez saisir l'ID d'une tournée pour afficher les détails.
+  </div>
+  

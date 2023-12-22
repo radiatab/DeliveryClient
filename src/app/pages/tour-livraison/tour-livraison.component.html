@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()">
+    <label for="tourId">ID de la tournée :</label>
+    <input type="number" id="tourId" [(ngModel)]="tourId" required>
+  
+    <label for="deliveryIds">IDs des livraisons (séparés par des virgules) :</label>
+    <input type="text" id="deliveryIds" [(ngModel)]="deliveryIds" required>
+  
+    <button type="submit">Ajouter les livraisons</button>
+  </form>
+  
+  <div *ngIf="addedDeliveriesSuccess">
+    Livraisons ajoutées avec succès à la tournée {{ tourId }}.
+  </div>
+  

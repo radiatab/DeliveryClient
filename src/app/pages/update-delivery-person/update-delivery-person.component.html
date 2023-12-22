@@ -1,0 +1,20 @@
+<div>
+  <h2>Mise à jour du livreur</h2>
+  <form #deliveryPersonForm="ngForm">
+    <label>ID du livreur: </label>
+    <input type="number" [(ngModel)]="updatedDeliveryPerson.id" name="id" required><br>
+
+    <label>Nom: </label>
+    <input type="text" [(ngModel)]="updatedDeliveryPerson.name" name="name" required><br>
+
+    <label>Disponible: </label>
+    <input type="checkbox" [(ngModel)]="updatedDeliveryPerson.available" name="available"><br>
+
+    <label>Date de création: </label>
+    <input type="date" [(ngModel)]="updatedDeliveryPerson.creationDate" name="creationDate" required><br>
+
+    <button type="button" (click)="updateDeliveryPerson(updatedDeliveryPerson.id)">Mettre à jour</button>
+  </form>
+</div>
+
+  

@@ -1,0 +1,22 @@
+<table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Available</th>
+        <th>Creation Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of deliveryPersons">
+        <td>{{ person.id }}</td>
+        <td>{{ person.name }}</td>
+        <td>{{ person.available }}</td>
+        <td>{{ person.creationDate }}</td>
+         
+       
+      </tr>
+    </tbody>
+  </table>
+
+  

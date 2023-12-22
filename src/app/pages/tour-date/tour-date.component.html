@@ -1,0 +1,40 @@
+<div>
+    <input type="date" [(ngModel)]="selectedDate">
+    <button (click)="getToursByDate()">Obtenir les tournées par date</button>
+  </div>
+  
+  <table *ngIf="tours.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom de la tournée</th>
+        <th>Description</th>
+        <th>Date de début</th>
+        <th>Date de fin</th>
+        <th>Nom</th>
+        <th>Livreurs </th>
+
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tour of tours">
+        <td>{{ tour.id }}</td>
+        <td>{{ tour.tourName }}</td>
+        <td>{{ tour.description }}</td>
+        <td>{{ tour.endDate}}</td>
+        <td>{{ tour.startDate }}</td>
+        <td>{{ tour.tourName }}</td>
+        <td>{{ tour.deliveryPersonId}}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+  
+  <div *ngIf="tours.length === 0 && selectedDate">
+    Aucune tournée trouvée pour la date sélectionnée.
+  </div>
+  
+  <div *ngIf="!selectedDate">
+    Veuillez sélectionner une date pour afficher les tournées.
+  </div>

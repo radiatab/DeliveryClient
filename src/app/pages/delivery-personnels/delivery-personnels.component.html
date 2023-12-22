@@ -1,0 +1,54 @@
+<div class="mx-1">
+  <div class="d-flex flex-column align-items-end mb-3"> 
+    <div class="mb-2">
+      <button  [routerLink]="'/user/new-deliveryPerson'" type="button" class="btn btn-primary btn-sm">
+        <i class="fas fa-plus"></i> 
+        &nbsp; New Delivery Person
+      </button>
+      <button  [routerLink]="'/user/delivery-person-search'" type="button" class="btn btn-primary btn-sm">
+    
+        &nbsp; Search
+      </button>
+      <div> <a [routerLink]="'/user/delivery-person-count'">  Delivery Person with count</a></div>
+      <div> <a [routerLink]="'/user/delivery-person-sorted-by-tours'">  Delivery person sorted by tours</a></div>
+      <button  [routerLink]="'/user/update-delivery-person'">modifier</button>
+    </div>
+    <div class="form-check form-switch">
+     
+    </div>
+     
+  </div>
+<div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Disponibilité</th>
+        <th>Date de création</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of deliveryPersons">
+        <td>{{ person.id }}</td>
+        <td>{{ person.name }}</td>
+        <td>{{ person.available ? 'Disponible' : 'Non disponible' }}</td>
+        <td>{{ person.creationDate | date }}</td>
+        <td>
+          <!-- Bouton pour naviguer vers les détails -->
+          <a [routerLink]="['/user/delivery-person-details', person.id]">Voir les détails</a>
+
+        </td>
+        <td><button (click)="deleteDeliveryPerson(person.id)">Supprimer</button></td>
+        
+        
+      </tr>
+    </tbody>
+  </table>
+  <!-- delivery-persons.component.html -->
+
+
+</div>
+</div>

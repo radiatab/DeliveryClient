@@ -1,0 +1,54 @@
+.container-fluid.card {
+    width: 500px !important;
+    
+}
+
+.orange-bar {
+    background: #FFD700 !important; 
+}
+
+  
+.smaller-width {
+    width: 150px; /* Ajustez la largeur selon votre préférence */
+  }
+  
+  .smaller-font {
+    font-size: 12px; /* Ajustez la taille de la police selon votre préférence */
+  }
+  
+  .verdana-style {
+    font-family: Verdana, sans-serif;
+  }
+  
+  /* Définir la taille du placeholder */
+.reduced-width::placeholder {
+    font-size: 12px; /* Taille de police pour le placeholder */
+  }
+  
+  #deliveryPersonSelect {
+    font-size: 12px; 
+    color: blue; 
+   
+  }
+  #startDate {
+    font-size: 12px; 
+    color: #808080;
+
+  }
+
+  #endDate{
+    font-size: 12px; 
+    color: #808080;
+
+  }
+
+ 
+.form-check-label {
+    font-size: 12px;
+  }
+  
+h3 {
+    font-size: 20px; 
+  }
+  
+  

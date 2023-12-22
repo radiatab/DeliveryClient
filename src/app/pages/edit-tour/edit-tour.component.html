@@ -1,0 +1,29 @@
+<div>
+    <h1>Mettre à jour une tournée</h1>
+    <form>
+      <div>
+        <label for="tourId">ID de la tournée :</label>
+        <input type="number" id="tourId" [(ngModel)]="updatedTourDto.id" name="tourId" required>
+      </div>
+      <div>
+        <label for="tourName">Nouveau nom de la tournée :</label>
+        <input type="text" id="tourName" [(ngModel)]="updatedTourDto.tourName" name="tourName">
+      </div>
+      <div>
+        <label for="tourDescription">Nouvelle description :</label>
+        <input type="text" id="tourDescription" [(ngModel)]="updatedTourDto.description" name="tourDescription">
+      </div>
+      <div>
+        <label for="startDate">Nouvelle date de début :</label>
+        <input type="date" id="startDate" [(ngModel)]="updatedTourDto.startDate" name="startDate">
+      </div>
+      <div>
+        <label for="endDate">Nouvelle date de fin :</label>
+        <input type="date" id="endDate" [(ngModel)]="updatedTourDto.endDate" name="endDate">
+      </div>
+      <!-- Ajoute d'autres champs pour le livreur, etc., selon tes besoins -->
+  
+      <button type="button" (click)="updatedTourDto.id !== null && updateTour(updatedTourDto.id)">Mettre à jour la tournée</button>
+    </form>
+  </div>
+  

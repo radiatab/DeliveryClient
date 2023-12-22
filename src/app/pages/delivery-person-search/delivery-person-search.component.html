@@ -1,0 +1,66 @@
+<div>
+    <label>Available:</label>
+    <input type="checkbox" [(ngModel)]="available" (change)="searchDeliveryPersons()">
+  </div>
+  
+  <div>
+    <label>Creation Date:</label>
+    <input type="date" [(ngModel)]="creationDate" (change)="searchDeliveryPersons()">
+  </div>
+  
+  <div>
+    <label>Creation Date After:</label>
+    <input type="date" [(ngModel)]="creationDateAfter" (change)="searchDeliveryPersons()">
+  </div>
+  
+  <div>
+    <label>Creation Date Before:</label>
+    <input type="date" [(ngModel)]="creationDateBefore" (change)="searchDeliveryPersons()">
+  </div>
+  
+  <div>
+    <label>Creation Date Between Start:</label>
+    <input type="date" [(ngModel)]="creationDateBetweenStart" (change)="searchDeliveryPersons()">
+  </div>
+  
+  <div>
+    <label>Creation Date Between End:</label>
+    <input type="date" [(ngModel)]="creationDateBetweenEnd" (change)="searchDeliveryPersons()">
+  </div>
+  
+  <div>
+    <label>Sort By:</label>
+    <select [(ngModel)]="sortBy" (change)="searchDeliveryPersons()">
+      <option value="name">Name</option>
+      <option value="name_desc">Name Descending</option>
+      <option value="creationDate">Creation Date</option>
+      <option value="creationDate_desc">Creation Date Descending</option>
+      <!-- Add other sorting options as needed -->
+    </select>
+  </div>
+  
+  <div>
+    <button (click)="searchDeliveryPersons()">Search</button>
+  </div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Available</th>
+        <th>Creation Date</th>
+        <!-- Add other table headers as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let deliveryPerson of deliveryPersons">
+        <td>{{ deliveryPerson.id }}</td>
+        <td>{{ deliveryPerson.name }}</td>
+        <td>{{ deliveryPerson.available }}</td>
+        <td>{{ deliveryPerson.creationDate | date }}</td>
+        <!-- Display other delivery person details as needed -->
+      </tr>
+    </tbody>
+  </table>
+  

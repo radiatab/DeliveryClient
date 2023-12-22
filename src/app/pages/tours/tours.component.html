@@ -1,0 +1,48 @@
+<div class="mx-1">
+    <div class="d-flex flex-column align-items-end mb-3"> 
+        <div class="mb-2">
+            <button [routerLink]="''" type="button" class="btn btn-primary btn-sm">
+                <i class="fas fa-plus"></i> 
+                &nbsp; New tour
+            </button>
+            <a [routerLink]="'/user/tour-details'"> chercher par ID</a>
+            <a [routerLink]="'/user/tour-delivery'"> chercher par livreur</a>
+           <button  [routerLink]="'/user/edit-tour'" type="button">Modifier</button>
+           <button [routerLink]="'/user/delete-tour'" >Supprimer</button>
+           <a [routerLink]="'/user/tour-date'">Serach by date</a>
+        </div>
+        
+          
+
+    </div>
+    <div>  </div>
+    <div>
+        <h2>Liste des tournées</h2>
+        <table class="tours-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom de la tournée</th>
+              <th>Description</th>
+              <th>Date de début</th>
+              <th>Date de fin</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tour of tours">
+              <td>{{ tour.id }}</td>
+              <td>{{ tour.tourName }}</td>
+              <td>{{ tour.description }}</td>
+              <td>{{ tour.startDate }}</td>
+              <td>{{ tour.endDate }}</td>
+             
+             
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+   
+</div>

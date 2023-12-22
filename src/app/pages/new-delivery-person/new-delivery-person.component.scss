@@ -1,0 +1,63 @@
+/* Styles pour le formulaire d'ajout de personne de livraison */
+form {
+  margin-top: 20px;
+  text-align: center; /* Aligner le contenu au centre */
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  div {
+    margin-bottom: 15px;
+    text-align: left; /* Aligner le texte à gauche */
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="checkbox"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #333;
+
+      &:focus {
+        outline: none;
+        border-color: #66afe9;
+        box-shadow: 0 0 5px #66afe9;
+      }
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+      margin-top: 5px;
+    }
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ff6347; /* Rouge orangé */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e05239; /* Rouge plus foncé au survol */
+    }
+  }
+  
+  /* Centrer horizontalement */
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}

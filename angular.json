@@ -20,6 +20,15 @@
             "outputPath": "dist/delivery-app",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "allowedCommonJsDependencies": [
+              "dayjs",
+              "dayjs/plugin/customParseFormat",
+              "dayjs/plugin/isBetween",
+              "dayjs/plugin/isSameOrAfter",
+              "dayjs/plugin/isSameOrBefore",
+              "dayjs/plugin/isoWeek",
+              "node_modules/dayjs/**"
+            ],
             "polyfills": [
               "zone.js"
             ],
@@ -30,9 +39,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/@angular/cdk/overlay-prebuilt.css"
+
             ],
-            "scripts": []
+            "scripts": [
+               
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+
+
+
+            ]
           },
           "configurations": {
             "production": {
@@ -100,5 +121,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "dc633277-ce6b-422a-89ef-bda9cdc22d9e"
   }
 }

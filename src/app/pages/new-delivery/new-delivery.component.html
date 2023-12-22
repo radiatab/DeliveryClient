@@ -1,0 +1,13 @@
+
+<form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="deliveryData.addressFrom" name="addressFrom" placeholder="Address From">
+    <input type="text" [(ngModel)]="deliveryData.addressTo" name="addressTo" placeholder="Address To">
+    
+    <!-- Champs supplémentaires -->
+    <input type="date" [(ngModel)]="deliveryData.deliveryDate" name="recipientName" placeholder="Recipient Name">
+    <input type="text" [(ngModel)]="deliveryData.id" name="identifiant" placeholder="identifiant">
+
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  

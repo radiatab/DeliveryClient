@@ -1,0 +1,12 @@
+<div class="person-details" *ngIf="deliveryPersonDetails">
+    <h2>Détails de la personne de livraison</h2>
+    <div>
+      <p>ID: {{ deliveryPersonDetails.deliveryPerson.id }}</p>
+      <p>Nom: {{ deliveryPersonDetails.deliveryPerson.name }}</p>
+      <p>Disponibilité: {{ deliveryPersonDetails.deliveryPerson.available ? 'Disponible' : 'Non disponible' }}</p>
+      <p>Date de création: {{ deliveryPersonDetails.deliveryPerson.creationDate | date }}</p>
+      <p>Nombre de livraisons: {{ deliveryPersonDetails.deliveryCount }}</p>
+      <p>Nombre de tournées: {{ deliveryPersonDetails.tourCount }}</p>
+    </div>
+  </div>
+  

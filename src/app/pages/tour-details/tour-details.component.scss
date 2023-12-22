@@ -1,0 +1,51 @@
+// Styles pour le champ d'entrée et le bouton
+input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff6347;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #ff6347;
+    }
+  }
+  
+  // Styles pour les éléments affichant les détails de la tournée
+  div {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+    & > ul {
+      list-style: none;
+      padding: 0;
+  
+      & > li {
+        margin-bottom: 5px;
+  
+        & > strong {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  
+  // Styles pour les messages conditionnels
+  div:not(:last-child) {
+    &.no-tour-found, &.select-tour {
+      background-color: #ffecec;
+      color: #b00;
+    }
+  }
+  

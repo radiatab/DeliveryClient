@@ -1,0 +1,26 @@
+<div *ngIf="deliveryPersonsPage.content.length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Available</th>
+          <th>Creation Date</th>
+          <th>Delivery Count</th>
+          <th>Tour Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of deliveryPersonsPage.content">
+            <td>{{ person.deliveryPerson.id }}</td>
+          <td>{{ person.deliveryPerson.name }}</td>
+          <td>{{ person.deliveryPerson.available }}</td>
+          <td>{{ person.deliveryPerson.creationDate }}</td>
+          <td>{{ person.deliveryCount }}</td>
+          <td>{{ person.tourCount }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
